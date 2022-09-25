@@ -1,0 +1,23 @@
+h1{
+    justify-content:center;
+    margin-top: 20%;
+    margin-left: 10em;
+}
+
+h2{
+    margin-left: 15em;
+}
+button{
+    margin-left: 25em;
+    margin-top: 15px;
+    cursor: pointer;
+    
+}
+button:hover{
+    color: rgb(255, 255, 255);
+    background-color: blueviolet;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 6px;
+    width: 90px;
+    height: 50px;
+}
