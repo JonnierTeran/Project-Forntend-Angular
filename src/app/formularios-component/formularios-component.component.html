@@ -1,0 +1,48 @@
+
+<div id="A">
+    <h5>ROUTER LINK Y ROUTERLINK ACTIVE</h5>
+    <h5>Two way dataBinding</h5>
+    <h5>ngSubmit</h5>
+    <h5>ngForm</h5>
+    <h5>ngIf</h5>
+    <h5>required</h5>
+    <h5>touched</h5>
+    <h5>pattern</h5>
+    <h5>Form.reset</h5>
+
+    <hr><hr><hr>
+
+    <h1>USANDO FORMULARIOS EN ANGULAR</h1>
+
+    <form #UserContact="ngForm" action="#" (ngSubmit)="OnSubmit(UserContact) ">
+
+        <label for="Nombre" >Nombre: </label> 
+        <input type="text" [(ngModel)]="Usuario.Nombre" #Nombre="ngModel" name="nombre"  placeholder="Ingresa Tu nombre aqui" required>
+        <br>
+        <span *ngIf="!Nombre.valid && Nombre.touched"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ingresar el nombre!!!</span>
+        <br>
+
+
+        <label for="Apellido" >Apellido: </label>
+        <input type="text"  [(ngModel)]="Usuario.Apellido" #Apellido="ngModel" name="Apellido" placeholder="Ingresa Tu Apellido aqui">
+        <br>
+        <span *ngIf="Apellido.valid && Apellido.touched"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ingresar el Apellido!!!</span>
+        <br>
+
+
+        <label for="Mensaje">Mensaje: </label> 
+        <textarea #Mesnsaje="ngModel"[(ngModel)]="Usuario.Mensaje" name="nombre" cols="20" rows="5" placeholder="Digita aqui tu mensaje"></textarea>
+        <br>
+
+
+        <label for="Email">Email: </label>
+        <input type="email" #Email="ngModel"[(ngModel)]="Usuario.Email" name="email" placeholder="Ingresa Tu Correo Electronico aqui" required pattern="[@]">
+        <br>
+        <span *ngIf="!Email.valid && Email.touched">Email invalido</span>
+
+
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+</div>

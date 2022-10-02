@@ -1,0 +1,60 @@
+<div id="A">
+        <h6>HTTP CLIENTMODULE</h6>
+        <h6>HTTP CLIENT </h6>
+        <h6>SERVICIOS</h6>
+        <h6>CONSUMIR API REST</h6>
+        <h6>ENVIO DE DATOS POR API REST</h6>
+        <h6>ROUTER LINK Y ROUTERLINK ACTIVE</h6>
+
+        <hr><hr><hr><hr><hr>
+
+        <h2>Registrando Usuariosde una Api</h2>
+
+        <form #form="ngForm" (ngSubmit)="OnSubmit(form)">
+            <label for="nombre" >Nombre</label>
+            <input type="text" [(ngModel)]="regUser.name" #Nombre="ngModel" name="nombre"  placeholder="Ingresa Tu nombre aqui" required>
+            <br>
+            <span *ngIf="!Nombre.valid && Nombre.touched">Verificar campo</span> <br>
+
+            <label for="Trabajo" >Trabajo</label>
+            <input type="text" [(ngModel)]="regUser.job" #trabajo="ngModel" name="trabajo"  placeholder="Ingresa Tu trabajo" required>
+            <span *ngIf="!trabajo.valid && trabajo.touched">Verificar Campos</span> <br>
+            <br>
+
+            <input type="submit" value="Registrar" >
+        </form>
+
+      <h3>{{a}}</h3>
+
+
+
+
+
+
+
+
+
+        <hr><hr><hr><hr><hr>
+    <h1>CONSUMIENDO UNA API EXTERNA CON ANGULAR</h1>
+
+    <h3>USUARIO DE LA API:</h3>
+
+    <input type="text"  [(ngModel)]="UserId" placeholder="Ingresar El id Del usuario">
+    <button (click)="CargarUser()">CARGAR USUARIO DE LA API</button>
+
+    <h1 *ngIf="!user">CARGANDO . . .</h1>
+    <div *ngIf="user">
+    <h4>{{'Nombre Completo: ' + user + " " + apellido}}</h4>
+    <h4>{{'Email: ' + email}}</h4>
+    <h4>{{'Identificador: ' + id}}</h4>
+
+    <h5>AVATAR:</h5>
+    <img src="{{avatar}}" alt="{{user + apellido}}" title="{{user + ' '+ apellido}}">
+    <br>
+    <br><br>
+    <button (click)="UserAnt()">USUARIO ANTERIOR</button>  <<->> <button (click)="UserSig()">USUARIO SIGUIENTE</button>
+    </div>
+    <br>
+    <br>
+    <br><br><br><br>
+</div>

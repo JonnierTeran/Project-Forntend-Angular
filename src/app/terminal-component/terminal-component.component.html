@@ -1,1 +1,37 @@
-<p>terminal-component works! COMPONENTE 3</p>
+<div id="A">
+      <h1>COMPONENTE 3</h1>
+      <h2>Two way - DataBinding</h2>
+      <h2>Binding por interpolacion</h2>
+      <h2>NgFor</h2>
+      <h2>Evento Click y keyUp</h2>
+      <h2>RouterLink y RouterLinkActive</h2>
+      <br>
+      <br>
+      <hr>
+      <hr>
+
+
+      <h3>{{gettitle()}}</h3>
+    
+    <h2>Edad: {{getedad()}}</h2>
+    <span *ngIf="getedad() >= 18">mayor de edad!!</span> 
+    <span *ngIf="getedad() < 18">menor de edad!!</span> <br>
+    <button (click)="Aumentar()">AUMENTAR</button> <br>
+    <button (click)="Dis()">DISMINUIR</button>
+    <hr><hr><hr>
+
+    <h2>LISTA DE FRAMEWORKS</h2>
+    <input type="text" (keyup.enter)="Agg()" placeholder="Agrega un nuevo framework" [(ngModel)]="Nuev">
+    <br>
+    <span *ngIf="ok == true" >--> llenar campos</span>
+    <button  (click)="Agg()">AGREGAR</button>
+
+    <div id="List">
+    <ul>
+      <li *ngFor="let Fm of getFrameworks(); let i = index;">
+        {{Fm}}
+        <button (click)="Borrar(i)" id="buttona">Eliminar</button>
+        </li>
+    </ul>
+  </div>
+</div>

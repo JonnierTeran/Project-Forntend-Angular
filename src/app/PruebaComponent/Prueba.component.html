@@ -1,1 +1,48 @@
-<h2>COMPONENTE 2</h2>
+<div id="A">
+
+    <h1>COMPONENTE 2</h1>
+    <h2>Two way - DataBinding</h2>
+    <h2>Binding por interpolacion</h2>
+    <h2>NgTemplate</h2>
+    <h2>Parametros por la url</h2>
+    <h2>Redireccionamiento</h2>
+    <h2>RouterLink y RouterLinkActive</h2>
+
+     <hr><hr>
+
+     <h3>Muestra de datos</h3>
+    <input type="text"  placeholder="Digita" [(ngModel)]="Digita">
+
+
+    <h1>{{Digita}}</h1>
+
+    <hr>
+
+    <h2 *ngIf="Parametro">El parametro ingresado por la Url es: {{Parametro}}</h2>
+    <h2 *ngIf="!Parametro">Ingrese un parametro por url</h2>
+    <hr>
+    <h4>Redireccionamiento</h4>
+    <button (click)="Redireccionar()">REDIRECCIONAR</button>
+
+    <hr>
+    <hr>
+    <hr>
+
+    <div *ngIf="Session; then SiSession else NoSession">
+ 
+    </div>
+
+    <ng-template #SiSession>
+    <h2>SESSION INICIADA</h2>
+     <b>Bienvenido {{Nombre}}</b> &nbsp;&nbsp;&nbsp;
+    <button (click)=" OffSession()">CERRAR SESION</button>  <br><br>
+    </ng-template>
+
+    <ng-template #NoSession>
+    <h2>NO HAS INICIADO SESSION</h2>
+    <input type="text" placeholder="Ingresa tu nombre" [(ngModel)]="Nombre" (keyup.enter)="OnSession()">
+    <button (click)="OnSession()">INICIAR SESSION</button>
+    <span *ngIf="Valid"><br>Ingresa un nombre valido<br></span>
+    <br><br><br>
+    </ng-template>
+</div>

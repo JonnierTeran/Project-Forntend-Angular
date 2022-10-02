@@ -1,26 +1,14 @@
-<p>Componente 1</p>
-<h1>{{gettitle()}}</h1>
-<br>
-<hr>
-<h2>Edad: {{getedad()}}</h2>
-<span *ngIf="getedad() >= 18">mayor de edad!!</span> 
-<span *ngIf="getedad() < 18">menor de edad!!</span> <br>
-<button (click)="Aumentar()">AUMENTAR</button> <br>
-<button (click)="Dis()">DISMINUIR</button>
-<hr><hr><hr>
-
-<h2>LISTA DE FRAMEWORKS</h2>
-<button (click)="Agg()">AGREGAR</button>
-<ol>
-  <li *ngFor="let Fm of getFrameworks(); let i = index;">
-     {{getFrameworks()[i]}}
-    </li>
-</ol>
-
-<hr>
-
-<Prueba-component></Prueba-component>
-
-<hr>
-
-<app-terminal-component></app-terminal-component>
+<div>
+  
+  <h1>PROYECTO DE ANGULAR</h1>
+  <div id="nav">
+    <a routerLink="/home" routerLinkActive="Ac">Home</a>
+    <a routerLink="/Dinamic" routerLinkActive="Ac">INPUT DINAMICO</a>
+    <a routerLink="/Edad" routerLinkActive="Ac">CALCULO DE EDAD Y FRAM</a>
+    <a routerLink="/Api" routerLinkActive="Ac">API COMPONENT</a>
+    <a routerLink="/Pipe" routerLinkActive="Ac">PIPES COMPONENT</a>
+    <a routerLink="/Forms/Data" routerLinkActive="Ac">FORMULARIOS COMPONENT</a>
+  </div>
+  
+  <router-outlet></router-outlet>
+</div>

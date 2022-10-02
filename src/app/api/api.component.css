@@ -1,0 +1,31 @@
+button:hover{
+    background: blue;
+    cursor: pointer;
+    border-radius: 8%;
+    border: 2px solid black;
+    color: rgb(255,255,255);
+}
+
+img{
+    cursor: pointer;
+    border: 5px solid black;
+    border-radius: 8%;
+}
+
+h4{
+    color: rgb(1, 1, 1);
+    border: 1px solid black;
+    font-size: 20px;
+  
+}
+
+
+#A{
+    border: 5px solid rgb(252, 253, 251);
+    padding: 30px;
+    display: inline-block;
+    margin-left: 15em;
+    border-radius: 30px;
+    text-align: center;
+    width: 46em;
+}
